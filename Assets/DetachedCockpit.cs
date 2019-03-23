@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RunawayEngine : MonoBehaviour
+public class DetachedCockpit : MonoBehaviour
 {
     //This is just to have a toggle in the editor for testing purposes
     public bool toggleState;
@@ -11,8 +11,6 @@ public class RunawayEngine : MonoBehaviour
     private bool detached = false;
     private Rigidbody rigid;
     public uint selfDestructTime = 10;
-    public float thrustForce;
-    public Vector3 spatialNoiseFactor = new Vector3(0.1f, 0.1f, 0.1f);
 
     // Start is called before the first frame update
     void Start()
@@ -28,11 +26,6 @@ public class RunawayEngine : MonoBehaviour
             toggleState = false;
             Detach();
         }
-
-        if (detached)
-        {
-            ThrustForward();
-        }
     }
 
     public void Detach()
@@ -41,22 +34,5 @@ public class RunawayEngine : MonoBehaviour
         transform.SetParent(null);
         Destroy(GetComponent<ConfigurableJoint>());
         Destroy(gameObject, selfDestructTime);
-    }
-
-    private void ThrustForward()
-    {
-        Vector3 direction = transform.right + spatialNoise();
-        direction.Normalize();
-        rigid.AddForce(direction * thrustForce);
-    }
-
-    private Vector3 spatialNoise()
-    {
-        Vector3 noise = new Vector3(
-            Random.Range(-spatialNoiseFactor.x, spatialNoiseFactor.x),
-            Random.Range(-spatialNoiseFactor.y, spatialNoiseFactor.y),
-            Random.Range(-spatialNoiseFactor.z, spatialNoiseFactor.z));
-
-            return noise;
     }
 }
