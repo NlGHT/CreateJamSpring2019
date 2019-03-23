@@ -11,7 +11,7 @@ public class ImpactDestroyer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        player = gameObject.GetComponentInParent<Controller>();
     }
 
     // Update is called once per frame
@@ -33,18 +33,18 @@ public class ImpactDestroyer : MonoBehaviour
             {
                 if (dot > 0)
                 {
-                    Debug.Log("I wreck it!");
+                    //Debug.Log("I wreck it!");
                     collision.gameObject.GetComponent<ImpactDestroyer>().Boom();
                 }
             }
             else
             {
-                Debug.Log("Weak!");
+                //Debug.Log("Weak!");
             }
         }
         else if (collision.relativeVelocity.magnitude > impactMagnitudeThreshold)
         {
-            Debug.Log("Oops!");
+            //Debug.Log("Oops!");
             Boom();
         }
 
@@ -53,7 +53,12 @@ public class ImpactDestroyer : MonoBehaviour
     public void Boom()
     {
         //Send message to controller that player is dead
-        //Controller should then release surviving engines
+        //Controller should then detach surviving engines
+        if (player != null)
+        {
+            player.Death();
+        }
+
         //This part should then explode
         Instantiate(explosionEffect, transform.position, transform.rotation);
         Destroy(gameObject);

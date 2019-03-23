@@ -10475,6 +10475,9 @@ MonoBehaviour:
   reverse: 274
   boost: 305
   move: 10
+  boostPower: 50
+  respawnTime: 3
+  playerPrefabReference: {fileID: 1843111832831849057}
 --- !u!114 &7146382492553432091
 MonoBehaviour:
   m_ObjectHideFlags: 0
