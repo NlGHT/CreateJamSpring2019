@@ -4,10 +4,25 @@ using UnityEngine;
 
 public class FinishLine : MonoBehaviour
 {
-    // When a collider enters the collider
+
+    public List<GameObject> PlayersFinished = new List<GameObject>();
+
+    // When a collider enters the collider of object, set them as done with level
     void OnTriggerEnter(Collider other)
     {
-        MeshRenderer meshRend = GetComponent<MeshRenderer>();
-        meshRend.material.color = Color.green;
+
+        if (!PlayersFinished.Contains(other.gameObject) && other.tag == "Player")
+        {
+            // If the player is not in the finished list, add them and destroy them
+            PlayersFinished.Add(other.gameObject);
+            Debug.Log("Player finished map");
+            Destroy(other.gameObject);
+
+            if (PlayersFinished.Count >= 4)
+            {
+                // Everyone finished the map, go to next one (randomized)
+                Debug.Log("All are done");
+            }
+        }
     }
 }
