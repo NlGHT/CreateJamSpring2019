@@ -22,7 +22,7 @@ public class ImpactDestroyer : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "PlayerPart")
         {
             Rigidbody rigidbody = gameObject.GetComponent<Rigidbody>();
             Vector3 forward = transform.TransformDirection(Vector3.right);

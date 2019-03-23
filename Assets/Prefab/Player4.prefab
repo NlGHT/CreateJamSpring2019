@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 890611606191452599}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.6450003, y: 0, z: 0}
+  m_LocalPosition: {x: 0.36, y: 0, z: 0}
   m_LocalScale: {x: 73.34636, y: 73.34621, z: 73.34636}
   m_Children: []
   m_Father: {fileID: 4039817316400644289}
@@ -103,7 +103,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 890611606328992685}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.51800007, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 890611607959528272}
@@ -1380,9 +1380,9 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 0, g: 0, b: 1, a: 1}
-        key1: {r: 1, g: 0, b: 1, a: 1}
-        key2: {r: 1, g: 1, b: 0, a: 0}
+        key0: {r: 1, g: 0.39215687, b: 0, a: 1}
+        key1: {r: 1, g: 1, b: 0, a: 1}
+        key2: {r: 0, g: 1, b: 0, a: 0}
         key3: {r: 1, g: 1, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
         key5: {r: 0, g: 0, b: 0, a: 0}
@@ -4833,7 +4833,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 890611606666822547}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.236, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 890611606427821042}
@@ -9531,7 +9531,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 890611607316875444}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.518, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 890611606427821042}
@@ -10808,9 +10808,9 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 0, g: 0, b: 1, a: 1}
-        key1: {r: 1, g: 0, b: 1, a: 1}
-        key2: {r: 1, g: 1, b: 0, a: 0}
+        key0: {r: 1, g: 0.39215687, b: 0, a: 1}
+        key1: {r: 1, g: 1, b: 0, a: 1}
+        key2: {r: 0, g: 1, b: 0, a: 0}
         key3: {r: 1, g: 1, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
         key5: {r: 0, g: 0, b: 0, a: 0}
@@ -14229,7 +14229,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 890611607562120698}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.2360001, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 890611607959528272}
@@ -18927,7 +18927,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 890611607582411524}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.645, y: 0, z: 0}
+  m_LocalPosition: {x: 0.3599996, y: 0, z: 0}
   m_LocalScale: {x: 73.34636, y: 73.34621, z: 73.34636}
   m_Children: []
   m_Father: {fileID: 4039817316821714473}
@@ -19004,7 +19004,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 890611607725327579}
   m_LocalRotation: {x: 1, y: 0, z: 0, w: 0}
-  m_LocalPosition: {x: 0.559, y: -0.35168, z: 0}
+  m_LocalPosition: {x: 0.636, y: -0.352, z: 0}
   m_LocalScale: {x: 55.545654, y: 29.86515, z: 55.545654}
   m_Children: []
   m_Father: {fileID: 4039817316508232526}
@@ -19099,6 +19099,8 @@ GameObject:
   - component: {fileID: 4039817316400644290}
   - component: {fileID: 4039817316400644291}
   - component: {fileID: 4039817316400644412}
+  - component: {fileID: 248541901701946485}
+  - component: {fileID: 1613934462218423669}
   m_Layer: 0
   m_Name: LeftEngine
   m_TagString: Untagged
@@ -19246,6 +19248,37 @@ ConfigurableJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &248541901701946485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4039817316400644413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44f4ccd2df137484b80bd433f89ab3ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  impactMagnitudeThreshold: 30
+  explosionEffect: {fileID: 686320230406431008, guid: 2fac5abf139a9a441a5d3d3223ae0359,
+    type: 3}
+--- !u!114 &1613934462218423669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4039817316400644413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03d8b732b1c96c14e84503a7ea84bd8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toggleState: 0
+  detached: 0
+  thrustForce: 0
+  spatialNoiseFactor: {x: 0.5, y: 0.5, z: 0.5}
 --- !u!1 &4039817316508232522
 GameObject:
   m_ObjectHideFlags: 0
@@ -19258,6 +19291,7 @@ GameObject:
   - component: {fileID: 4039817316508232527}
   - component: {fileID: 4039817316508232520}
   - component: {fileID: 4039817316508232521}
+  - component: {fileID: 8891659634076870315}
   m_Layer: 0
   m_Name: Cockpit
   m_TagString: Untagged
@@ -19404,6 +19438,21 @@ ConfigurableJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &8891659634076870315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4039817316508232522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44f4ccd2df137484b80bd433f89ab3ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  impactMagnitudeThreshold: 30
+  explosionEffect: {fileID: 686320230406431008, guid: 2fac5abf139a9a441a5d3d3223ae0359,
+    type: 3}
 --- !u!1 &4039817316821714469
 GameObject:
   m_ObjectHideFlags: 0
@@ -19416,6 +19465,8 @@ GameObject:
   - component: {fileID: 4039817316821714474}
   - component: {fileID: 4039817316821714475}
   - component: {fileID: 4039817316821714468}
+  - component: {fileID: 312967111579219551}
+  - component: {fileID: 6888085277568475639}
   m_Layer: 0
   m_Name: RightEngine
   m_TagString: Untagged
@@ -19563,6 +19614,37 @@ ConfigurableJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &312967111579219551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4039817316821714469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44f4ccd2df137484b80bd433f89ab3ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  impactMagnitudeThreshold: 30
+  explosionEffect: {fileID: 686320230406431008, guid: 2fac5abf139a9a441a5d3d3223ae0359,
+    type: 3}
+--- !u!114 &6888085277568475639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4039817316821714469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03d8b732b1c96c14e84503a7ea84bd8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toggleState: 0
+  detached: 0
+  thrustForce: 0
+  spatialNoiseFactor: {x: 0.5, y: 0.5, z: 0.5}
 --- !u!1 &4039817316999696192
 GameObject:
   m_ObjectHideFlags: 0
@@ -19721,6 +19803,7 @@ GameObject:
   - component: {fileID: 890611606912043226}
   - component: {fileID: 890611606912043225}
   - component: {fileID: 890611606912043173}
+  - component: {fileID: 6612375552199054120}
   m_Layer: 0
   m_Name: Player4
   m_TagString: Untagged
@@ -20203,3 +20286,19 @@ MonoBehaviour:
   reverse: 261
   boost: 113
   move: 10
+--- !u!114 &6612375552199054120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4039817318196916454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d36a31d5c1479f4e972e7a994a44e16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boostParticleSystem:
+  - {fileID: 890611607316875447}
+  - {fileID: 890611606328992680}
+  toggleState: 0

@@ -213,6 +213,7 @@ GameObject:
   - component: {fileID: 1368588797650890390}
   - component: {fileID: 1368588797650890391}
   - component: {fileID: 1368588797650890388}
+  - component: {fileID: 899101029}
   m_Layer: 0
   m_Name: Cockpit
   m_TagString: Untagged
@@ -359,6 +360,21 @@ ConfigurableJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &899101029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1368588797650890389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44f4ccd2df137484b80bd433f89ab3ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  impactMagnitudeThreshold: 30
+  explosionEffect: {fileID: 686320230406431008, guid: 2fac5abf139a9a441a5d3d3223ae0359,
+    type: 3}
 --- !u!1 &1368588797724102873
 GameObject:
   m_ObjectHideFlags: 0
@@ -509,7 +525,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1368588798133039843}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.536, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1368588798207249773}
@@ -1786,9 +1802,9 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 0, g: 0, b: 1, a: 1}
-        key1: {r: 1, g: 0, b: 1, a: 1}
-        key2: {r: 1, g: 1, b: 0, a: 0}
+        key0: {r: 0, g: 1, b: 1, a: 1}
+        key1: {r: 0, g: 0, b: 1, a: 1}
+        key2: {r: 0, g: 1, b: 0, a: 0}
         key3: {r: 1, g: 1, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
         key5: {r: 0, g: 0, b: 0, a: 0}
@@ -5207,7 +5223,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1368588798141885090}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.536, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1368588798499472642}
@@ -6484,9 +6500,9 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 0, g: 0, b: 1, a: 1}
-        key1: {r: 1, g: 0, b: 1, a: 1}
-        key2: {r: 1, g: 1, b: 0, a: 0}
+        key0: {r: 0, g: 1, b: 1, a: 1}
+        key1: {r: 0, g: 0, b: 1, a: 1}
+        key2: {r: 0, g: 1, b: 0, a: 0}
         key3: {r: 1, g: 1, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
         key5: {r: 0, g: 0, b: 0, a: 0}
@@ -9928,6 +9944,7 @@ GameObject:
   - component: {fileID: 1368588798228192685}
   - component: {fileID: 1368588798228192682}
   - component: {fileID: 1368588798228192683}
+  - component: {fileID: 7514032996937982929}
   m_Layer: 0
   m_Name: Player3
   m_TagString: Untagged
@@ -10410,6 +10427,22 @@ MonoBehaviour:
   reverse: 107
   boost: 32
   move: 10
+--- !u!114 &7514032996937982929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1368588798228192680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d36a31d5c1479f4e972e7a994a44e16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boostParticleSystem:
+  - {fileID: 1368588798141885095}
+  - {fileID: 1368588798133039844}
+  toggleState: 0
 --- !u!1 &1368588798499472643
 GameObject:
   m_ObjectHideFlags: 0
@@ -15152,6 +15185,8 @@ GameObject:
   - component: {fileID: 1368588798801161991}
   - component: {fileID: 1368588798801161988}
   - component: {fileID: 1368588798801161989}
+  - component: {fileID: 899101028}
+  - component: {fileID: 899101027}
   m_Layer: 0
   m_Name: RightEngine
   m_TagString: Untagged
@@ -15299,6 +15334,37 @@ ConfigurableJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &899101028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1368588798801161986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44f4ccd2df137484b80bd433f89ab3ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  impactMagnitudeThreshold: 30
+  explosionEffect: {fileID: 686320230406431008, guid: 2fac5abf139a9a441a5d3d3223ae0359,
+    type: 3}
+--- !u!114 &899101027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1368588798801161986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03d8b732b1c96c14e84503a7ea84bd8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toggleState: 0
+  detached: 0
+  thrustForce: 250
+  spatialNoiseFactor: {x: 0.5, y: 0.5, z: 0.5}
 --- !u!1 &1368588798816117765
 GameObject:
   m_ObjectHideFlags: 0
@@ -20056,6 +20122,8 @@ GameObject:
   - component: {fileID: 1368588799083648410}
   - component: {fileID: 1368588799083648411}
   - component: {fileID: 1368588799083648408}
+  - component: {fileID: 899101026}
+  - component: {fileID: 899101025}
   m_Layer: 0
   m_Name: LeftEngine
   m_TagString: Untagged
@@ -20203,3 +20271,34 @@ ConfigurableJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &899101026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1368588799083648409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44f4ccd2df137484b80bd433f89ab3ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  impactMagnitudeThreshold: 30
+  explosionEffect: {fileID: 686320230406431008, guid: 2fac5abf139a9a441a5d3d3223ae0359,
+    type: 3}
+--- !u!114 &899101025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1368588799083648409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03d8b732b1c96c14e84503a7ea84bd8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toggleState: 0
+  detached: 0
+  thrustForce: 250
+  spatialNoiseFactor: {x: 0.5, y: 0.5, z: 0.5}
