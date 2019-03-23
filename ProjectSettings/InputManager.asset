@@ -329,8 +329,8 @@ InputManager:
     m_Name: p3Rotation
     descriptiveName: 
     descriptiveNegativeName: 
-    negativeButton: 
-    positiveButton: 
+    negativeButton: l
+    positiveButton: j
     altNegativeButton: 
     altPositiveButton: 
     gravity: 3
@@ -345,8 +345,8 @@ InputManager:
     m_Name: p4Rotation
     descriptiveName: 
     descriptiveNegativeName: 
-    negativeButton: 
-    positiveButton: 
+    negativeButton: '[6]'
+    positiveButton: '[4]'
     altNegativeButton: 
     altPositiveButton: 
     gravity: 3

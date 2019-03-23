@@ -62,6 +62,7 @@
   <ItemGroup>
     <Compile Include="Assets\CommaFix.cs" />
     <Compile Include="Assets\FinishLine.cs" />
+    <Compile Include="Assets\RunawayEngine.cs" />
     <Compile Include="Assets\Scripts\Controller.cs" />
     <Compile Include="Assets\Scripts\IgnoreCollisionWithParts.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
