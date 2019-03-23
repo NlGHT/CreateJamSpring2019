@@ -60,11 +60,32 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\BoostEffectController.cs" />
     <Compile Include="Assets\CommaFix.cs" />
     <Compile Include="Assets\FinishLine.cs" />
+    <Compile Include="Assets\Game Jam Template\Scripts\FlexibleUI\FlexibleUI.cs" />
+    <Compile Include="Assets\Game Jam Template\Scripts\FlexibleUI\FlexibleUIButton.cs" />
+    <Compile Include="Assets\Game Jam Template\Scripts\FlexibleUI\FlexibleUIData.cs" />
+    <Compile Include="Assets\Game Jam Template\Scripts\FlexibleUI\FlexibleUIImage.cs" />
+    <Compile Include="Assets\Game Jam Template\Scripts\FlexibleUI\FlexibleUISlider.cs" />
+    <Compile Include="Assets\Game Jam Template\Scripts\FlexibleUI\FlexibleUIText.cs" />
+    <Compile Include="Assets\Game Jam Template\Scripts\Menu\DontDestroy.cs" />
+    <Compile Include="Assets\Game Jam Template\Scripts\Menu\EventSystemChecker.cs" />
+    <Compile Include="Assets\Game Jam Template\Scripts\Menu\MenuObject.cs" />
+    <Compile Include="Assets\Game Jam Template\Scripts\Menu\MenuSettings.cs" />
+    <Compile Include="Assets\Game Jam Template\Scripts\Menu\Pause.cs" />
+    <Compile Include="Assets\Game Jam Template\Scripts\Menu\PlayMusic.cs" />
+    <Compile Include="Assets\Game Jam Template\Scripts\Menu\QuitApplication.cs" />
+    <Compile Include="Assets\Game Jam Template\Scripts\Menu\SetAudioLevels.cs" />
+    <Compile Include="Assets\Game Jam Template\Scripts\Menu\ShowPanels.cs" />
+    <Compile Include="Assets\Game Jam Template\Scripts\Menu\StartOptions.cs" />
+    <Compile Include="Assets\ImpactDestroyer.cs" />
     <Compile Include="Assets\RunawayEngine.cs" />
     <Compile Include="Assets\Scripts\Controller.cs" />
     <Compile Include="Assets\Scripts\IgnoreCollisionWithParts.cs" />
+    <None Include="Assets\Game Jam Template\Fonts\OpenSans\License!.txt" />
+    <None Include="Assets\Game Jam Template\GameJamTemplateReadMe.txt" />
+    <None Include="Assets\Game Jam Template\README.txt" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/pbusk/Documents/GitHub/CreateJamSpring2019/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
