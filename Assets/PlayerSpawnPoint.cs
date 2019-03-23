@@ -41,6 +41,7 @@ public class PlayerSpawnPoint : MonoBehaviour
         GameObject temp = Instantiate(spawnableObject, transform.position, transform.rotation);
         existingController = temp.GetComponent<Controller>();
         existingController.spawner = this;
+        existingController.isActive = true;
         respawning = false;
     }
 }
