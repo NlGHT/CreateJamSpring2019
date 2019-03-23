@@ -16,6 +16,8 @@ public class Controller : MonoBehaviour
     private float timeAccelerating;
     private const float AudioFadeFactor = 0.5f;
 
+    public bool isActive = false;
+
     // Rotation variables
     public float torque = 10;
     public float rotateStrength;
@@ -49,151 +51,155 @@ public class Controller : MonoBehaviour
 
     void Update()
     {
-        float deltaTime = Time.deltaTime;
-        Debug.Log(deltaTime);
-
-
-        rotateStrength = Input.GetAxis(input);
-        if (rotateStrength != 0)
+        if (isActive)
         {
-            // Rotate the player
-            rigid.AddTorque(transform.forward * torque * (rotateStrength * 0.4f));
-        }
-
-        // Movement keys, adds force in desired direction
-        if (Input.GetKey(forward))
-        {
-            rigid.AddForce(transform.right * move);
+            float deltaTime = Time.deltaTime;
+            Debug.Log(deltaTime);
 
 
-            timeAccelerating += deltaTime;
-            if (timeAccelerating > 1)
+            rotateStrength = Input.GetAxis(input);
+            if (rotateStrength != 0)
             {
-                timeAccelerating = 1.0f;
+                // Rotate the player
+                rigid.AddTorque(transform.forward * torque * (rotateStrength * 0.4f));
             }
 
-            Debug.Log(timeAccelerating);
+            // Movement keys, adds force in desired direction
+            if (Input.GetKey(forward))
+            {
+                rigid.AddForce(transform.right * move);
 
-            if (!accelerating)
-            {
-                idleToFullSound.time = timeAccelerating;
-                fullToIdleSound.Stop();
-                idleToFullSound.Play();
-            }
-            else
-            {
-                if (timeAccelerating < 1)
+
+                timeAccelerating += deltaTime;
+                if (timeAccelerating > 1)
                 {
-                    if (idleToFullSound.volume >= 1)
-                    {
-                        if (idleToFullSound.time > 0.8)
-                        {
-                            idleToFullSound.volume += AudioFadeFactor;
-                            if (fullSound.isPlaying)
-                            {
-                                if (fullSound.volume < 1)
-                                {
-                                    fullSound.volume += AudioFadeFactor;
-                                }
+                    timeAccelerating = 1.0f;
+                }
 
-                            }
-                            /*
-                            else
-                            {
-                                fullSound.volume = 0;
-                                fullSound.Play();
-                            }
-                            */
-                        }
-                        else if (idleToFullSound.time < 0.2)
-                        {
-                            idleToFullSound.volume += AudioFadeFactor;
-                            idleSound.volume -= AudioFadeFactor;
-                        }
-                    }
+                Debug.Log(timeAccelerating);
+
+                if (!accelerating)
+                {
+                    idleToFullSound.time = timeAccelerating;
+                    fullToIdleSound.Stop();
+                    idleToFullSound.Play();
                 }
                 else
                 {
-                    fullSound.volume = 1;
+                    if (timeAccelerating < 1)
+                    {
+                        if (idleToFullSound.volume >= 1)
+                        {
+                            if (idleToFullSound.time > 0.8)
+                            {
+                                idleToFullSound.volume += AudioFadeFactor;
+                                if (fullSound.isPlaying)
+                                {
+                                    if (fullSound.volume < 1)
+                                    {
+                                        fullSound.volume += AudioFadeFactor;
+                                    }
+
+                                }
+                                /*
+                                else
+                                {
+                                    fullSound.volume = 0;
+                                    fullSound.Play();
+                                }
+                                */
+                            }
+                            else if (idleToFullSound.time < 0.2)
+                            {
+                                idleToFullSound.volume += AudioFadeFactor;
+                                idleSound.volume -= AudioFadeFactor;
+                            }
+                        }
+                    }
+                    else
+                    {
+                        fullSound.volume = 1;
+                    }
+
                 }
 
-            }
-
-            accelerating = true;
-        }
-        else
-        {
-            timeAccelerating -= deltaTime;
-            Debug.Log("Else Deltatime: " + timeAccelerating);
-
-            if (timeAccelerating < 0)
-            {
-                timeAccelerating = 0;
-            }
-
-            if (accelerating)
-            {
-                fullToIdleSound.time = timeAccelerating;
-                idleToFullSound.Stop();
-                fullToIdleSound.Play();
+                accelerating = true;
             }
             else
             {
-                if (timeAccelerating > 0)
-                {
-                    if (fullToIdleSound.volume >= 1)
-                    {
-                        if (fullToIdleSound.time < 0.2)
-                        {
-                            fullToIdleSound.volume += AudioFadeFactor;
-                            if (idleSound.isPlaying)
-                            {
-                                if (idleSound.volume < 1)
-                                {
-                                    idleSound.volume += AudioFadeFactor;
-                                }
+                timeAccelerating -= deltaTime;
+                Debug.Log("Else Deltatime: " + timeAccelerating);
 
-                            }
-                            /*
-                            else
-                            {
-                                idleSound.volume = 0;
-                                idleSound.Play();
-                            }
-                            */
-                        }
-                        else if (fullToIdleSound.time > 0.8)
-                        {
-                            fullToIdleSound.volume += AudioFadeFactor;
-                            fullSound.volume -= AudioFadeFactor;
-                        }
-                    }
+                if (timeAccelerating < 0)
+                {
+                    timeAccelerating = 0;
+                }
+
+                if (accelerating)
+                {
+                    fullToIdleSound.time = timeAccelerating;
+                    idleToFullSound.Stop();
+                    fullToIdleSound.Play();
                 }
                 else
                 {
-                    idleSound.volume = 1;
+                    if (timeAccelerating > 0)
+                    {
+                        if (fullToIdleSound.volume >= 1)
+                        {
+                            if (fullToIdleSound.time < 0.2)
+                            {
+                                fullToIdleSound.volume += AudioFadeFactor;
+                                if (idleSound.isPlaying)
+                                {
+                                    if (idleSound.volume < 1)
+                                    {
+                                        idleSound.volume += AudioFadeFactor;
+                                    }
+
+                                }
+                                /*
+                                else
+                                {
+                                    idleSound.volume = 0;
+                                    idleSound.Play();
+                                }
+                                */
+                            }
+                            else if (fullToIdleSound.time > 0.8)
+                            {
+                                fullToIdleSound.volume += AudioFadeFactor;
+                                fullSound.volume -= AudioFadeFactor;
+                            }
+                        }
+                    }
+                    else
+                    {
+                        idleSound.volume = 1;
+                    }
+
                 }
-
+                accelerating = false;
             }
-            accelerating = false;
-        }
 
-        idleSound.volume = 1 - timeAccelerating*AudioFadeFactor*2-0.1f;
-        fullSound.volume = timeAccelerating*AudioFadeFactor*2;
+            idleSound.volume = 1 - timeAccelerating * AudioFadeFactor * 2 - 0.1f;
+            fullSound.volume = timeAccelerating * AudioFadeFactor * 2;
 
-        if (Input.GetKey(reverse))
-        {
-            rigid.AddForce(-transform.right * move);
+            if (Input.GetKey(reverse))
+            {
+                rigid.AddForce(-transform.right * move);
+            }
+            if (Input.GetKeyDown(boost))
+            {
+                move += 100;
+                // Use rocket boost
+            }
+            else
+            {
+                // If not rocket boosted, old move speed
+                move = OriginalMove;
+            }
         }
-        if (Input.GetKeyDown(boost))
-        {
-            move += 100;
-            // Use rocket boost
-        }
-        else
-        {
-            // If not rocket boosted, old move speed
-            move = OriginalMove;
-        }
+        
     }
 }

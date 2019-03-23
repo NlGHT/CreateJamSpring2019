@@ -60,9 +60,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\BoostEffectController.cs" />
-    <Compile Include="Assets\CommaFix.cs" />
-    <Compile Include="Assets\FinishLine.cs" />
+    <Compile Include="Assets\DetachedCockpit.cs" />
     <Compile Include="Assets\Game Jam Template\Scripts\FlexibleUI\FlexibleUI.cs" />
     <Compile Include="Assets\Game Jam Template\Scripts\FlexibleUI\FlexibleUIButton.cs" />
     <Compile Include="Assets\Game Jam Template\Scripts\FlexibleUI\FlexibleUIData.cs" />
@@ -79,10 +77,14 @@
     <Compile Include="Assets\Game Jam Template\Scripts\Menu\SetAudioLevels.cs" />
     <Compile Include="Assets\Game Jam Template\Scripts\Menu\ShowPanels.cs" />
     <Compile Include="Assets\Game Jam Template\Scripts\Menu\StartOptions.cs" />
-    <Compile Include="Assets\ImpactDestroyer.cs" />
-    <Compile Include="Assets\RunawayEngine.cs" />
+    <Compile Include="Assets\Scripts\BoostEffectController.cs" />
+    <Compile Include="Assets\Scripts\CommaFix.cs" />
     <Compile Include="Assets\Scripts\Controller.cs" />
+    <Compile Include="Assets\Scripts\FinishLine.cs" />
     <Compile Include="Assets\Scripts\IgnoreCollisionWithParts.cs" />
+    <Compile Include="Assets\Scripts\ImpactDestroyer.cs" />
+    <Compile Include="Assets\Scripts\RunawayEngine.cs" />
+    <Compile Include="Assets\Starter.cs" />
     <None Include="Assets\Game Jam Template\Fonts\OpenSans\License!.txt" />
     <None Include="Assets\Game Jam Template\GameJamTemplateReadMe.txt" />
     <None Include="Assets\Game Jam Template\README.txt" />
