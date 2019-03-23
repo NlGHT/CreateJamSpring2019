@@ -30,13 +30,9 @@ public class Controller : MonoBehaviour
     public KeyCode reverse = KeyCode.S;
     public KeyCode boost = KeyCode.Q;
     public float move = 10;
-    float OriginalMove;
-    public float boostPower = 50;
+    float OriginalMove = 10;
 
     Rigidbody rigid; // rigid body for character
-    BoostEffectController bec; //Boost effect
-    public float respawnTime = 3f;
-    public PlayerSpawnPoint spawner;
 
     void Start()
     {
@@ -45,36 +41,17 @@ public class Controller : MonoBehaviour
         idleToFullSound = engineSoundSources[1];
         fullSound = engineSoundSources[2];
         fullToIdleSound = engineSoundSources[3];
-        OriginalMove = move;
 
         fullSound.volume = 0;
         fullSound.Play();
         //idleSound.volume = 0;
         idleSound.Play();
-
-        bec = GetComponent<BoostEffectController>();
     }
 
 
     void Update()
     {
-<<<<<<< HEAD
         if (isActive)
-=======
-        float deltaTime = Time.deltaTime;
-        //Debug.Log(deltaTime);
-
-
-        rotateStrength = Input.GetAxis(input);
-        if (rotateStrength != 0)
-        {
-            // Rotate the player
-            rigid.AddTorque(transform.forward * torque * (rotateStrength * 0.4f));
-        }
-
-        // Movement keys, adds force in desired direction
-        if (Input.GetKey(forward))
->>>>>>> 94c81290a65f955cb83b4a464713a419092786bd
         {
             float deltaTime = Time.deltaTime;
             Debug.Log(deltaTime);
@@ -87,20 +64,8 @@ public class Controller : MonoBehaviour
                 rigid.AddTorque(transform.forward * torque * (rotateStrength * 0.4f));
             }
 
-<<<<<<< HEAD
             // Movement keys, adds force in desired direction
             if (Input.GetKey(forward))
-=======
-            //Debug.Log(timeAccelerating);
-
-            if (!accelerating)
-            {
-                idleToFullSound.time = timeAccelerating;
-                fullToIdleSound.Stop();
-                idleToFullSound.Play();
-            }
-            else
->>>>>>> 94c81290a65f955cb83b4a464713a419092786bd
             {
                 rigid.AddForce(transform.right * move);
 
@@ -151,27 +116,10 @@ public class Controller : MonoBehaviour
                             }
                         }
                     }
-<<<<<<< HEAD
                     else
                     {
                         fullSound.volume = 1;
                     }
-=======
-                }
-                else
-                {
-                    fullSound.volume = 1;
-                }
-
-            }
-
-            accelerating = true;
-        }
-        else
-        {
-            timeAccelerating -= deltaTime;
-            //Debug.Log("Else Deltatime: " + timeAccelerating);
->>>>>>> 94c81290a65f955cb83b4a464713a419092786bd
 
                 }
 
@@ -234,7 +182,6 @@ public class Controller : MonoBehaviour
                 accelerating = false;
             }
 
-<<<<<<< HEAD
             idleSound.volume = 1 - timeAccelerating * AudioFadeFactor * 2 - 0.1f;
             fullSound.volume = timeAccelerating * AudioFadeFactor * 2;
 
@@ -254,53 +201,5 @@ public class Controller : MonoBehaviour
             }
         }
         
-=======
-        idleSound.volume = 1 - timeAccelerating * AudioFadeFactor * 2 - 0.1f;
-        fullSound.volume = timeAccelerating * AudioFadeFactor * 2;
-
-        if (Input.GetKey(reverse))
-        {
-            rigid.AddForce(-transform.right * move);
-        }
-
-        if (Input.GetKeyDown(boost))
-        {
-            bec.Active = true;
-            move = boostPower;
-            // Use rocket boost
-
-        }
-        else if (Input.GetKeyUp(boost))
-        {
-            // If not rocket boosted, old move speed
-            move = OriginalMove;
-            bec.Active = false;
-        }
-    }
-
-    public void Death()
-    {
-        RunawayEngine[] remainingEngines = gameObject.GetComponentsInChildren<RunawayEngine>();
-        foreach (RunawayEngine re in remainingEngines)
-        {
-            re.Detach();
-        }
-
-        DetachedCockpit cockpit = GetComponentInChildren<DetachedCockpit>();
-        if (cockpit != null)
-        {
-            cockpit.Detach();
-        }
-
-        Respawn();
-        
-        Destroy(gameObject);
-    }
-
-    void Respawn()
-    {
-        //Tell spawnPoint to spawn
-        spawner.RespawnAfterDuration(respawnTime);
->>>>>>> 94c81290a65f955cb83b4a464713a419092786bd
     }
 }
