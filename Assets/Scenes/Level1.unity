@@ -1155,13 +1155,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 534669902}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 534d8f7afd4b67f4f8546f2c994aaf32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   players: []
-  camera: {fileID: 0}
   maxZDistance: 0
 --- !u!1001 &539636118
 PrefabInstance:
