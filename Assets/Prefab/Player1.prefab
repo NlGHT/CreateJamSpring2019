@@ -76,6 +76,7 @@ GameObject:
   - component: {fileID: 3768465034528038000}
   - component: {fileID: 3768465034528038015}
   - component: {fileID: 3768465034528038014}
+  - component: {fileID: 420498104}
   m_Layer: 0
   m_Name: Player1
   m_TagString: Untagged
@@ -148,6 +149,22 @@ MonoBehaviour:
   - {fileID: 3768465036310112958}
   - {fileID: 3768465035921681830}
   - {fileID: 3768465035960960977}
+--- !u!114 &420498104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3768465034528038013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d36a31d5c1479f4e972e7a994a44e16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boostParticleSystem:
+  - {fileID: 2827270903890006158}
+  - {fileID: 493530644807977480}
+  toggleState: 0
 --- !u!1 &3768465035444233179
 GameObject:
   m_ObjectHideFlags: 0
@@ -772,11 +789,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1927761769}
     m_Modifications:
-    - target: {fileID: 3644847485354425410, guid: 2f14101e33b1b9e4d8db8e99de2dc655,
-        type: 3}
-      propertyPath: m_Name
-      value: EngineTurbo
-      objectReference: {fileID: 0}
     - target: {fileID: 3644847485354425409, guid: 2f14101e33b1b9e4d8db8e99de2dc655,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -832,6 +844,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3644847485354425410, guid: 2f14101e33b1b9e4d8db8e99de2dc655,
+        type: 3}
+      propertyPath: m_Name
+      value: EngineTurbo
+      objectReference: {fileID: 0}
     - target: {fileID: 3644847485354425408, guid: 2f14101e33b1b9e4d8db8e99de2dc655,
         type: 3}
       propertyPath: LightsModule.ratio
@@ -849,6 +866,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f14101e33b1b9e4d8db8e99de2dc655, type: 3}
+--- !u!198 &2827270903890006158 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 3644847485354425408, guid: 2f14101e33b1b9e4d8db8e99de2dc655,
+    type: 3}
+  m_PrefabInstance: {fileID: 1560887126662311118}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2827270903890006159 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3644847485354425409, guid: 2f14101e33b1b9e4d8db8e99de2dc655,
@@ -1016,11 +1039,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 240865227}
     m_Modifications:
-    - target: {fileID: 3644847485354425410, guid: 2f14101e33b1b9e4d8db8e99de2dc655,
-        type: 3}
-      propertyPath: m_Name
-      value: EngineTurbo
-      objectReference: {fileID: 0}
     - target: {fileID: 3644847485354425409, guid: 2f14101e33b1b9e4d8db8e99de2dc655,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1076,6 +1094,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3644847485354425410, guid: 2f14101e33b1b9e4d8db8e99de2dc655,
+        type: 3}
+      propertyPath: m_Name
+      value: EngineTurbo
+      objectReference: {fileID: 0}
     - target: {fileID: 3644847485354425408, guid: 2f14101e33b1b9e4d8db8e99de2dc655,
         type: 3}
       propertyPath: LightsModule.ratio
@@ -1096,6 +1119,12 @@ PrefabInstance:
 --- !u!4 &493530644807977481 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3644847485354425409, guid: 2f14101e33b1b9e4d8db8e99de2dc655,
+    type: 3}
+  m_PrefabInstance: {fileID: 3768465035149063752}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &493530644807977480 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 3644847485354425408, guid: 2f14101e33b1b9e4d8db8e99de2dc655,
     type: 3}
   m_PrefabInstance: {fileID: 3768465035149063752}
   m_PrefabAsset: {fileID: 0}
