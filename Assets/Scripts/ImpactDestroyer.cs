@@ -60,7 +60,11 @@ public class ImpactDestroyer : MonoBehaviour
         }
 
         //This part should then explode
-        Instantiate(explosionEffect, transform.position, transform.rotation);
         Destroy(gameObject);
+    }
+
+    private void OnDestroy()
+    {
+        Instantiate(explosionEffect, transform.position, transform.rotation);
     }
 }
