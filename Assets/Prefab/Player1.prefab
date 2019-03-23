@@ -77,7 +77,7 @@ GameObject:
   - component: {fileID: 3768465034528038015}
   - component: {fileID: 3768465034528038014}
   m_Layer: 0
-  m_Name: Player
+  m_Name: Player1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -832,6 +832,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3644847485354425408, guid: 2f14101e33b1b9e4d8db8e99de2dc655,
+        type: 3}
+      propertyPath: LightsModule.ratio
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3644847485354425408, guid: 2f14101e33b1b9e4d8db8e99de2dc655,
+        type: 3}
+      propertyPath: LightsModule.intensityCurve.scalar
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3644847485354425408, guid: 2f14101e33b1b9e4d8db8e99de2dc655,
+        type: 3}
+      propertyPath: LightsModule.maxLights
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f14101e33b1b9e4d8db8e99de2dc655, type: 3}
 --- !u!4 &2827270903890006159 stripped
@@ -1060,6 +1075,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3644847485354425408, guid: 2f14101e33b1b9e4d8db8e99de2dc655,
+        type: 3}
+      propertyPath: LightsModule.ratio
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3644847485354425408, guid: 2f14101e33b1b9e4d8db8e99de2dc655,
+        type: 3}
+      propertyPath: LightsModule.intensityCurve.scalar
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3644847485354425408, guid: 2f14101e33b1b9e4d8db8e99de2dc655,
+        type: 3}
+      propertyPath: LightsModule.maxLights
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f14101e33b1b9e4d8db8e99de2dc655, type: 3}

@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 240865226}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.367, y: 0, z: 0}
+  m_LocalPosition: {x: -0.719, y: 0.146, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 9161219950720883332}
@@ -56,7 +56,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1927761768}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.36699998, y: 0, z: 0}
+  m_LocalPosition: {x: -0.719, y: 0.14599998, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8067110775958105028}
@@ -772,6 +772,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1927761769}
     m_Modifications:
+    - target: {fileID: 3644847485354425410, guid: 2f14101e33b1b9e4d8db8e99de2dc655,
+        type: 3}
+      propertyPath: m_Name
+      value: EngineTurbo
+      objectReference: {fileID: 0}
     - target: {fileID: 3644847485354425409, guid: 2f14101e33b1b9e4d8db8e99de2dc655,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -827,10 +832,35 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3644847485354425410, guid: 2f14101e33b1b9e4d8db8e99de2dc655,
+    - target: {fileID: 3644847485354425408, guid: 2f14101e33b1b9e4d8db8e99de2dc655,
         type: 3}
-      propertyPath: m_Name
-      value: EngineTurbo
+      propertyPath: ColorModule.gradient.maxGradient.key0.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3644847485354425408, guid: 2f14101e33b1b9e4d8db8e99de2dc655,
+        type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key1.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3644847485354425408, guid: 2f14101e33b1b9e4d8db8e99de2dc655,
+        type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key1.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3644847485354425408, guid: 2f14101e33b1b9e4d8db8e99de2dc655,
+        type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key1.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3644847485354425408, guid: 2f14101e33b1b9e4d8db8e99de2dc655,
+        type: 3}
+      propertyPath: LightsModule.ratio
+      value: 0.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 3644847485354425408, guid: 2f14101e33b1b9e4d8db8e99de2dc655,
+        type: 3}
+      propertyPath: LightsModule.maxLights
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f14101e33b1b9e4d8db8e99de2dc655, type: 3}
@@ -928,7 +958,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4cc4204d4e53d8b47bb57b9a06d68561, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.559
+      value: 0.096
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4cc4204d4e53d8b47bb57b9a06d68561, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1005,6 +1035,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 240865227}
     m_Modifications:
+    - target: {fileID: 3644847485354425410, guid: 2f14101e33b1b9e4d8db8e99de2dc655,
+        type: 3}
+      propertyPath: m_Name
+      value: EngineTurbo
+      objectReference: {fileID: 0}
     - target: {fileID: 3644847485354425409, guid: 2f14101e33b1b9e4d8db8e99de2dc655,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1060,10 +1095,35 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3644847485354425410, guid: 2f14101e33b1b9e4d8db8e99de2dc655,
+    - target: {fileID: 3644847485354425408, guid: 2f14101e33b1b9e4d8db8e99de2dc655,
         type: 3}
-      propertyPath: m_Name
-      value: EngineTurbo
+      propertyPath: ColorModule.gradient.maxGradient.key0.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3644847485354425408, guid: 2f14101e33b1b9e4d8db8e99de2dc655,
+        type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key1.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3644847485354425408, guid: 2f14101e33b1b9e4d8db8e99de2dc655,
+        type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key1.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3644847485354425408, guid: 2f14101e33b1b9e4d8db8e99de2dc655,
+        type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key1.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3644847485354425408, guid: 2f14101e33b1b9e4d8db8e99de2dc655,
+        type: 3}
+      propertyPath: LightsModule.ratio
+      value: 0.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 3644847485354425408, guid: 2f14101e33b1b9e4d8db8e99de2dc655,
+        type: 3}
+      propertyPath: LightsModule.maxLights
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f14101e33b1b9e4d8db8e99de2dc655, type: 3}
@@ -1165,7 +1225,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: dbfbfba3182f6bf4bae2a4fc069f343e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.13
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: dbfbfba3182f6bf4bae2a4fc069f343e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1248,7 +1308,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: dbfbfba3182f6bf4bae2a4fc069f343e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.13
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: dbfbfba3182f6bf4bae2a4fc069f343e, type: 3}
       propertyPath: m_LocalPosition.z
