@@ -14,6 +14,7 @@ public class Controller : MonoBehaviour
 
     // Movement variables
     public KeyCode forward = KeyCode.W;
+    public KeyCode reverse = KeyCode.S;
     public KeyCode boost = KeyCode.Q;
     public float move = 10;
     float OriginalMove = 10;
@@ -32,13 +33,17 @@ public class Controller : MonoBehaviour
         if (rotateStrength != 0)
         {
             // Rotate the player
-            rigid.AddTorque(transform.forward * torque * rotateStrength);
+            rigid.AddTorque(transform.forward * torque * (rotateStrength*0.4f));
         }
 
         // Movement keys, adds force in desired direction
         if (Input.GetKey(forward))
         {
             rigid.AddForce(transform.right * move);
+        }
+        if (Input.GetKey(reverse))
+        {
+            rigid.AddForce(-transform.right * move);
         }
         if (Input.GetKeyDown(boost))
         {
