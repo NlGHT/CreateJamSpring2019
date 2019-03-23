@@ -28,9 +28,13 @@ public class Controller : MonoBehaviour
     public KeyCode reverse = KeyCode.S;
     public KeyCode boost = KeyCode.Q;
     public float move = 10;
-    float OriginalMove = 10;
+    float OriginalMove;
+    public float boostPower = 50;
 
     Rigidbody rigid; // rigid body for character
+    BoostEffectController bec; //Boost effect
+    public float respawnTime = 3f;
+    public PlayerSpawnPoint spawner;
 
     void Start()
     {
@@ -39,18 +43,21 @@ public class Controller : MonoBehaviour
         idleToFullSound = engineSoundSources[1];
         fullSound = engineSoundSources[2];
         fullToIdleSound = engineSoundSources[3];
+        OriginalMove = move;
 
         fullSound.volume = 0;
         fullSound.Play();
         //idleSound.volume = 0;
         idleSound.Play();
+
+        bec = GetComponent<BoostEffectController>();
     }
 
 
     void Update()
     {
         float deltaTime = Time.deltaTime;
-        Debug.Log(deltaTime);
+        //Debug.Log(deltaTime);
 
 
         rotateStrength = Input.GetAxis(input);
@@ -72,7 +79,7 @@ public class Controller : MonoBehaviour
                 timeAccelerating = 1.0f;
             }
 
-            Debug.Log(timeAccelerating);
+            //Debug.Log(timeAccelerating);
 
             if (!accelerating)
             {
@@ -124,7 +131,7 @@ public class Controller : MonoBehaviour
         else
         {
             timeAccelerating -= deltaTime;
-            Debug.Log("Else Deltatime: " + timeAccelerating);
+            //Debug.Log("Else Deltatime: " + timeAccelerating);
 
             if (timeAccelerating < 0)
             {
@@ -178,22 +185,51 @@ public class Controller : MonoBehaviour
             accelerating = false;
         }
 
-        idleSound.volume = 1 - timeAccelerating*AudioFadeFactor*2-0.1f;
-        fullSound.volume = timeAccelerating*AudioFadeFactor*2;
+        idleSound.volume = 1 - timeAccelerating * AudioFadeFactor * 2 - 0.1f;
+        fullSound.volume = timeAccelerating * AudioFadeFactor * 2;
 
         if (Input.GetKey(reverse))
         {
             rigid.AddForce(-transform.right * move);
         }
+
         if (Input.GetKeyDown(boost))
         {
-            move += 100;
+            bec.Active = true;
+            move = boostPower;
             // Use rocket boost
+
         }
-        else
+        else if (Input.GetKeyUp(boost))
         {
             // If not rocket boosted, old move speed
             move = OriginalMove;
+            bec.Active = false;
         }
+    }
+
+    public void Death()
+    {
+        RunawayEngine[] remainingEngines = gameObject.GetComponentsInChildren<RunawayEngine>();
+        foreach (RunawayEngine re in remainingEngines)
+        {
+            re.Detach();
+        }
+
+        DetachedCockpit cockpit = GetComponentInChildren<DetachedCockpit>();
+        if (cockpit != null)
+        {
+            cockpit.Detach();
+        }
+
+        Respawn();
+        
+        Destroy(gameObject);
+    }
+
+    void Respawn()
+    {
+        //Tell spawnPoint to spawn
+        spawner.RespawnAfterDuration(respawnTime);
     }
 }
