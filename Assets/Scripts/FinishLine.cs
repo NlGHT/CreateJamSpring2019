@@ -52,7 +52,7 @@ public class FinishLine : MonoBehaviour
             TextMesh tempText = placeList[PlayersFinished.Count - 1].GetComponent<TextMesh>();
             tempText.text = other.gameObject.name;
 
-            if (PlayersFinished.Count >= 1)
+            if (PlayersFinished.Count >= 4)
             {
                 // Everyone finished the map, go to next one (randomized)
                 Debug.Log("All are done");
