@@ -97,11 +97,13 @@ public class Controller : MonoBehaviour
                                 }
 
                             }
+                            /*
                             else
                             {
                                 fullSound.volume = 0;
                                 fullSound.Play();
                             }
+                            */
                         }
                         else if (idleToFullSound.time < 0.2)
                         {
@@ -152,11 +154,13 @@ public class Controller : MonoBehaviour
                                 }
 
                             }
+                            /*
                             else
                             {
                                 idleSound.volume = 0;
                                 idleSound.Play();
                             }
+                            */
                         }
                         else if (fullToIdleSound.time > 0.8)
                         {
