@@ -10852,11 +10852,11 @@ MonoBehaviour:
   torque: 15
   rotateStrength: 0
   input: p1Rotation
-  leftRotate: 106
-  rightRotate: 108
-  forward: 105
-  reverse: 107
-  boost: 32
+  leftRotate: 97
+  rightRotate: 100
+  forward: 119
+  reverse: 115
+  boost: 304
   move: 10
 --- !u!114 &4589392709928875847
 MonoBehaviour:

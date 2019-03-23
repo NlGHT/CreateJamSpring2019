@@ -10420,7 +10420,7 @@ MonoBehaviour:
   - {fileID: 1368588798228192682}
   torque: 15
   rotateStrength: 0
-  input: p1Rotation
+  input: p3Rotation
   leftRotate: 106
   rightRotate: 108
   forward: 105

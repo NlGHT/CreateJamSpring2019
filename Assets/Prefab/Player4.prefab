@@ -20279,12 +20279,12 @@ MonoBehaviour:
   - {fileID: 890611606912043225}
   torque: 15
   rotateStrength: 0
-  input: p1Rotation
+  input: p4Rotation
   leftRotate: 260
   rightRotate: 262
   forward: 264
   reverse: 261
-  boost: 113
+  boost: 271
   move: 10
 --- !u!114 &6612375552199054120
 MonoBehaviour:

@@ -10452,12 +10452,12 @@ MonoBehaviour:
   - {fileID: 1843111832831849056}
   torque: 15
   rotateStrength: 0
-  input: p1Rotation
-  leftRotate: 106
-  rightRotate: 108
-  forward: 105
-  reverse: 107
-  boost: 32
+  input: p2Rotation
+  leftRotate: 276
+  rightRotate: 275
+  forward: 273
+  reverse: 274
+  boost: 305
   move: 10
 --- !u!114 &7146382492553432091
 MonoBehaviour:
