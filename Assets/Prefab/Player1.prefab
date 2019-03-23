@@ -137,6 +137,7 @@ GameObject:
   - component: {fileID: 4974732848386931201}
   - component: {fileID: 4974732848386931202}
   - component: {fileID: 6338809232238421491}
+  - component: {fileID: 189731983}
   m_Layer: 0
   m_Name: Cockpit
   m_TagString: PlayerPart
@@ -295,9 +296,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44f4ccd2df137484b80bd433f89ab3ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  impactMagnitudeThreshold: 30
+  impactMagnitudeThreshold: 20
   explosionEffect: {fileID: 686320230406431008, guid: 2fac5abf139a9a441a5d3d3223ae0359,
     type: 3}
+--- !u!114 &189731983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4974732848386931203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c837cdbe6a7195d4eba4d089db201ad6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toggleState: 0
+  detached: 0
+  selfDestructTime: 10
 --- !u!1 &4974732848570587614
 GameObject:
   m_ObjectHideFlags: 0
@@ -672,7 +688,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44f4ccd2df137484b80bd433f89ab3ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  impactMagnitudeThreshold: 30
+  impactMagnitudeThreshold: 20
   explosionEffect: {fileID: 686320230406431008, guid: 2fac5abf139a9a441a5d3d3223ae0359,
     type: 3}
 --- !u!114 &6338809232238421495
@@ -689,6 +705,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toggleState: 0
   detached: 0
+  selfDestructTime: 10
   thrustForce: 250
   spatialNoiseFactor: {x: 0.5, y: 0.5, z: 0.5}
 --- !u!1 &4974732849316946574
@@ -5609,7 +5626,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44f4ccd2df137484b80bd433f89ab3ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  impactMagnitudeThreshold: 30
+  impactMagnitudeThreshold: 20
   explosionEffect: {fileID: 686320230406431008, guid: 2fac5abf139a9a441a5d3d3223ae0359,
     type: 3}
 --- !u!114 &6338809232238421493
@@ -5626,6 +5643,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toggleState: 0
   detached: 0
+  selfDestructTime: 10
   thrustForce: 250
   spatialNoiseFactor: {x: 0.5, y: 0.5, z: 0.5}
 --- !u!1 &4974732849541137202

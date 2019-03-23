@@ -19103,7 +19103,7 @@ GameObject:
   - component: {fileID: 1613934462218423669}
   m_Layer: 0
   m_Name: LeftEngine
-  m_TagString: Untagged
+  m_TagString: PlayerPart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19260,7 +19260,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44f4ccd2df137484b80bd433f89ab3ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  impactMagnitudeThreshold: 30
+  impactMagnitudeThreshold: 20
   explosionEffect: {fileID: 686320230406431008, guid: 2fac5abf139a9a441a5d3d3223ae0359,
     type: 3}
 --- !u!114 &1613934462218423669
@@ -19277,7 +19277,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toggleState: 0
   detached: 0
-  thrustForce: 0
+  selfDestructTime: 10
+  thrustForce: 250
   spatialNoiseFactor: {x: 0.5, y: 0.5, z: 0.5}
 --- !u!1 &4039817316508232522
 GameObject:
@@ -19292,9 +19293,10 @@ GameObject:
   - component: {fileID: 4039817316508232520}
   - component: {fileID: 4039817316508232521}
   - component: {fileID: 8891659634076870315}
+  - component: {fileID: 14604101}
   m_Layer: 0
   m_Name: Cockpit
-  m_TagString: Untagged
+  m_TagString: PlayerPart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19450,9 +19452,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44f4ccd2df137484b80bd433f89ab3ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  impactMagnitudeThreshold: 30
+  impactMagnitudeThreshold: 20
   explosionEffect: {fileID: 686320230406431008, guid: 2fac5abf139a9a441a5d3d3223ae0359,
     type: 3}
+--- !u!114 &14604101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4039817316508232522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c837cdbe6a7195d4eba4d089db201ad6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toggleState: 0
+  detached: 0
+  selfDestructTime: 10
 --- !u!1 &4039817316821714469
 GameObject:
   m_ObjectHideFlags: 0
@@ -19469,7 +19486,7 @@ GameObject:
   - component: {fileID: 6888085277568475639}
   m_Layer: 0
   m_Name: RightEngine
-  m_TagString: Untagged
+  m_TagString: PlayerPart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19626,7 +19643,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44f4ccd2df137484b80bd433f89ab3ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  impactMagnitudeThreshold: 30
+  impactMagnitudeThreshold: 20
   explosionEffect: {fileID: 686320230406431008, guid: 2fac5abf139a9a441a5d3d3223ae0359,
     type: 3}
 --- !u!114 &6888085277568475639
@@ -19643,7 +19660,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toggleState: 0
   detached: 0
-  thrustForce: 0
+  selfDestructTime: 10
+  thrustForce: 250
   spatialNoiseFactor: {x: 0.5, y: 0.5, z: 0.5}
 --- !u!1 &4039817316999696192
 GameObject:
@@ -19806,7 +19824,7 @@ GameObject:
   - component: {fileID: 6612375552199054120}
   m_Layer: 0
   m_Name: Player4
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

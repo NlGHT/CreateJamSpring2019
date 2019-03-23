@@ -35,7 +35,6 @@ public class ImpactDestroyer : MonoBehaviour
                 {
                     Debug.Log("I wreck it!");
                     collision.gameObject.GetComponent<ImpactDestroyer>().Boom();
-                    Debug.Break();
                 }
             }
             else
@@ -47,7 +46,6 @@ public class ImpactDestroyer : MonoBehaviour
         {
             Debug.Log("Oops!");
             Boom();
-            Debug.Break();
         }
 
     }
