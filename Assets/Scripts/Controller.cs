@@ -3,41 +3,42 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class controller : MonoBehaviour
+public class Controller : MonoBehaviour
 {
+    // Rotation variables
+    public float torque = 10;
+    public float rotateStrength;
+    public string input = "p1Rotation";
     public KeyCode leftRotate = KeyCode.A;
     public KeyCode rightRotate = KeyCode.D;
-    public KeyCode up = KeyCode.W;
+
+    // Movement variables
+    public KeyCode forward = KeyCode.W;
     public KeyCode boost = KeyCode.Q;
-    Rigidbody rigid;
-    public float torque = 10;
     public float move = 10;
     float OriginalMove = 10;
-    public float rotateSpeed = 1f;
-    // Start is called before the first frame update
+
+    Rigidbody rigid; // rigid body for character
+
     void Start()
     {
         rigid = GetComponent<Rigidbody>();
     }
 
-    // Update is called once per frame
+
     void Update()
     {
-        if (Input.GetKey(rightRotate))
+        rotateStrength = Input.GetAxis(input);
+        if (rotateStrength != 0)
         {
-            // Rotate right
-            transform.Rotate(0, 0, rotateSpeed);
+            // Rotate the player
+            rigid.AddTorque(transform.forward * torque * rotateStrength);
         }
 
-        if (Input.GetKey(leftRotate))
-        {
-            // Rotate left
-            rigid.AddTorque(transform.up * torque);
-        }
-        if (Input.GetKey(up))
+        // Movement keys, adds force in desired direction
+        if (Input.GetKey(forward))
         {
             rigid.AddForce(transform.right * move);
-            // Add force on y-axis upwards - eg. move up
         }
         if (Input.GetKeyDown(boost))
         {
@@ -46,6 +47,7 @@ public class controller : MonoBehaviour
         }
         else
         {
+            // If not rocket boosted, old move speed
             move = OriginalMove;
         }
     }
