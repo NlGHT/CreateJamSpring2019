@@ -61,6 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\DetachedCockpit.cs" />
+    <Compile Include="Assets\ExplosionAudioController.cs" />
     <Compile Include="Assets\Game Jam Template\Scripts\FlexibleUI\FlexibleUI.cs" />
     <Compile Include="Assets\Game Jam Template\Scripts\FlexibleUI\FlexibleUIButton.cs" />
     <Compile Include="Assets\Game Jam Template\Scripts\FlexibleUI\FlexibleUIData.cs" />
@@ -78,6 +79,7 @@
     <Compile Include="Assets\Game Jam Template\Scripts\Menu\ShowPanels.cs" />
     <Compile Include="Assets\Game Jam Template\Scripts\Menu\StartOptions.cs" />
     <Compile Include="Assets\PlayerSpawnPoint.cs" />
+    <Compile Include="Assets\Scripts\ActionFollower.cs" />
     <Compile Include="Assets\Scripts\BoostEffectController.cs" />
     <Compile Include="Assets\Scripts\CommaFix.cs" />
     <Compile Include="Assets\Scripts\Controller.cs" />

@@ -19263,6 +19263,8 @@ MonoBehaviour:
   impactMagnitudeThreshold: 20
   explosionEffect: {fileID: 686320230406431008, guid: 2fac5abf139a9a441a5d3d3223ae0359,
     type: 3}
+  explosionAudioCarrier: {fileID: 2192760853603139070, guid: 94f96fa81c6cb2d4bb117f64529088df,
+    type: 3}
 --- !u!114 &1613934462218423669
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19455,6 +19457,8 @@ MonoBehaviour:
   impactMagnitudeThreshold: 20
   explosionEffect: {fileID: 686320230406431008, guid: 2fac5abf139a9a441a5d3d3223ae0359,
     type: 3}
+  explosionAudioCarrier: {fileID: 2192760853603139070, guid: 94f96fa81c6cb2d4bb117f64529088df,
+    type: 3}
 --- !u!114 &14604101
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19645,6 +19649,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   impactMagnitudeThreshold: 20
   explosionEffect: {fileID: 686320230406431008, guid: 2fac5abf139a9a441a5d3d3223ae0359,
+    type: 3}
+  explosionAudioCarrier: {fileID: 2192760853603139070, guid: 94f96fa81c6cb2d4bb117f64529088df,
     type: 3}
 --- !u!114 &6888085277568475639
 MonoBehaviour:
@@ -20295,6 +20301,8 @@ MonoBehaviour:
   - {fileID: 890611606912043226}
   - {fileID: 890611606912043227}
   - {fileID: 890611606912043225}
+  masterVolume: -0.5
+  isActive: 0
   torque: 15
   rotateStrength: 0
   input: p4Rotation
@@ -20306,7 +20314,7 @@ MonoBehaviour:
   move: 10
   boostPower: 50
   respawnTime: 3
-  playerPrefabReference: {fileID: 890611606912043173}
+  spawner: {fileID: 0}
 --- !u!114 &6612375552199054120
 MonoBehaviour:
   m_ObjectHideFlags: 0

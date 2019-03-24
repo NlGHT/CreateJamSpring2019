@@ -15,6 +15,7 @@ public class Controller : MonoBehaviour
     private bool accelerating;
     private float timeAccelerating;
     private const float AudioFadeFactor = 0.5f;
+    public float masterVolume;
 
     public bool isActive = false;
 
@@ -50,7 +51,7 @@ public class Controller : MonoBehaviour
 
         fullSound.volume = 0;
         fullSound.Play();
-        //idleSound.volume = 0;
+        idleSound.volume = 0.2f;
         idleSound.Play();
 
         bec = GetComponent<BoostEffectController>();
@@ -96,16 +97,31 @@ public class Controller : MonoBehaviour
                 {
                     if (timeAccelerating < 1)
                     {
-                        if (idleToFullSound.volume >= 1)
+                        if (idleToFullSound.volume >= 1 + masterVolume)
                         {
                             if (idleToFullSound.time > 0.8)
                             {
-                                idleToFullSound.volume += AudioFadeFactor;
+                                if (idleToFullSound.volume > masterVolume)
+                                {
+                                    idleToFullSound.volume = masterVolume;
+                                }
+                                else
+                                {
+                                    idleToFullSound.volume += AudioFadeFactor;
+                                }
+
                                 if (fullSound.isPlaying)
                                 {
-                                    if (fullSound.volume < 1)
+                                    if (fullSound.volume < 1 + masterVolume)
                                     {
-                                        fullSound.volume += AudioFadeFactor;
+                                        if (fullSound.volume > masterVolume)
+                                        {
+                                            fullSound.volume = masterVolume;
+                                        }
+                                        else
+                                        {
+                                            fullSound.volume += AudioFadeFactor;
+                                        }
                                     }
 
                                 }
@@ -119,14 +135,21 @@ public class Controller : MonoBehaviour
                             }
                             else if (idleToFullSound.time < 0.2)
                             {
-                                idleToFullSound.volume += AudioFadeFactor;
+                                if (idleToFullSound.volume > masterVolume)
+                                {
+                                    idleToFullSound.volume = masterVolume;
+                                }
+                                else
+                                {
+                                    idleToFullSound.volume += AudioFadeFactor;
+                                }
                                 idleSound.volume -= AudioFadeFactor;
                             }
                         }
                     }
                     else
                     {
-                        fullSound.volume = 1;
+                        fullSound.volume = masterVolume;
                     }
 
                 }
@@ -153,16 +176,31 @@ public class Controller : MonoBehaviour
                 {
                     if (timeAccelerating > 0)
                     {
-                        if (fullToIdleSound.volume >= 1)
+                        if (fullToIdleSound.volume >= 1 + masterVolume)
                         {
-                            if (fullToIdleSound.time < 0.2)
+                            if (fullToIdleSound.time < 0.2 + masterVolume)
                             {
-                                fullToIdleSound.volume += AudioFadeFactor;
+                                if (fullToIdleSound.volume > masterVolume)
+                                {
+                                    fullToIdleSound.volume = masterVolume;
+                                }
+                                else
+                                {
+                                    fullToIdleSound.volume += AudioFadeFactor;
+                                }
+                                
                                 if (idleSound.isPlaying)
                                 {
-                                    if (idleSound.volume < 1)
+                                    if (idleSound.volume < 1 + masterVolume)
                                     {
-                                        idleSound.volume += AudioFadeFactor;
+                                        if (idleSound.volume > 1 + masterVolume)
+                                        {
+                                            idleSound.volume = masterVolume;
+                                        }
+                                        else
+                                        {
+                                            idleSound.volume += AudioFadeFactor;
+                                        }   
                                     }
 
                                 }
@@ -174,24 +212,32 @@ public class Controller : MonoBehaviour
                                 }
                                 */
                             }
-                            else if (fullToIdleSound.time > 0.8)
+                            else if (fullToIdleSound.time > 0.8 + masterVolume)
                             {
-                                fullToIdleSound.volume += AudioFadeFactor;
+                                if (fullToIdleSound.volume > masterVolume)
+                                {
+                                    fullToIdleSound.volume = masterVolume;
+                                }
+                                else
+                                {
+                                    fullToIdleSound.volume += AudioFadeFactor;
+                                }
+
                                 fullSound.volume -= AudioFadeFactor;
                             }
                         }
                     }
                     else
                     {
-                        idleSound.volume = 1;
+                        idleSound.volume = masterVolume;
                     }
 
                 }
                 accelerating = false;
             }
 
-            idleSound.volume = 1 - timeAccelerating * AudioFadeFactor * 2 - 0.1f;
-            fullSound.volume = timeAccelerating * AudioFadeFactor * 2;
+            idleSound.volume = 1 - timeAccelerating * AudioFadeFactor * 2 + masterVolume;
+            fullSound.volume = timeAccelerating * AudioFadeFactor * 2 + masterVolume;
 
             if (Input.GetKey(reverse))
             {

@@ -299,6 +299,8 @@ MonoBehaviour:
   impactMagnitudeThreshold: 20
   explosionEffect: {fileID: 686320230406431008, guid: 2fac5abf139a9a441a5d3d3223ae0359,
     type: 3}
+  explosionAudioCarrier: {fileID: 2192760853603139070, guid: 94f96fa81c6cb2d4bb117f64529088df,
+    type: 3}
 --- !u!114 &189731983
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -690,6 +692,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   impactMagnitudeThreshold: 20
   explosionEffect: {fileID: 686320230406431008, guid: 2fac5abf139a9a441a5d3d3223ae0359,
+    type: 3}
+  explosionAudioCarrier: {fileID: 2192760853603139070, guid: 94f96fa81c6cb2d4bb117f64529088df,
     type: 3}
 --- !u!114 &6338809232238421495
 MonoBehaviour:
@@ -5629,6 +5633,8 @@ MonoBehaviour:
   impactMagnitudeThreshold: 20
   explosionEffect: {fileID: 686320230406431008, guid: 2fac5abf139a9a441a5d3d3223ae0359,
     type: 3}
+  explosionAudioCarrier: {fileID: 2192760853603139070, guid: 94f96fa81c6cb2d4bb117f64529088df,
+    type: 3}
 --- !u!114 &6338809232238421493
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10487,7 +10493,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 40
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -10583,7 +10589,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 40
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -10679,7 +10685,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 40
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -10775,7 +10781,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 40
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -10867,6 +10873,8 @@ MonoBehaviour:
   - {fileID: 4974732849969547579}
   - {fileID: 4974732849969547578}
   - {fileID: 4974732849969547580}
+  masterVolume: -0.5
+  isActive: 0
   torque: 15
   rotateStrength: 0
   input: p1Rotation
@@ -10878,7 +10886,7 @@ MonoBehaviour:
   move: 10
   boostPower: 50
   respawnTime: 3
-  playerPrefabReference: {fileID: 4974732849969547581}
+  spawner: {fileID: 0}
 --- !u!114 &4589392709928875847
 MonoBehaviour:
   m_ObjectHideFlags: 0

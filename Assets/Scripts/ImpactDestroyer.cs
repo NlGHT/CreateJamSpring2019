@@ -7,11 +7,14 @@ public class ImpactDestroyer : MonoBehaviour
     public float impactMagnitudeThreshold = 50;
     private Controller player;
     public ParticleSystem explosionEffect;
+    public GameObject explosionAudioCarrier;
+    //public AudioSource explosionAudio;
 
     // Start is called before the first frame update
     void Start()
     {
         player = gameObject.GetComponentInParent<Controller>();
+        //explosionAudio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -59,8 +62,16 @@ public class ImpactDestroyer : MonoBehaviour
             player.Death();
         }
 
+        //PlayClipAtPoint(explosionAudio.clip, explosionAudio.transform.position);
+
         //This part should then explode
-        Instantiate(explosionEffect, transform.position, transform.rotation);
         Destroy(gameObject);
+    }
+
+    private void OnDestroy()
+    {
+        Instantiate(explosionAudioCarrier, transform.position, transform.rotation);
+
+        Instantiate(explosionEffect, transform.position, transform.rotation);
     }
 }

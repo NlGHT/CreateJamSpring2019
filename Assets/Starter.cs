@@ -12,6 +12,10 @@ public class Starter : MonoBehaviour
     public GameObject r3pos;
     public GameObject g1pos;
 
+    // Audio
+    public AudioSource redLight;
+    public AudioSource greenLight;
+
     bool r1Spawned = false;
     bool r2Spawned = false;
     bool r3Spawned = false;
@@ -41,6 +45,7 @@ public class Starter : MonoBehaviour
             if (!r1Spawned)
             {
                 GameObject r1Temp = Instantiate(redLightPrefab, r1pos.transform);
+                playRedLightSoundEffect();
                 Destroy(r1Temp, 5);
                 r1Spawned = true;
             }
@@ -52,6 +57,7 @@ public class Starter : MonoBehaviour
             if (!r2Spawned)
             {
                 GameObject r2Temp = Instantiate(redLightPrefab, r2pos.transform);
+                playRedLightSoundEffect();
                 Destroy(r2Temp, 4);
                 r2Spawned = true;
             }
@@ -63,6 +69,7 @@ public class Starter : MonoBehaviour
             if (!r3Spawned)
             {
                 GameObject r3Temp = Instantiate(redLightPrefab, r3pos.transform);
+                playRedLightSoundEffect();
                 Destroy(r3Temp, 3);
                 r3Spawned = true;
             }
@@ -74,6 +81,7 @@ public class Starter : MonoBehaviour
             if (!g1Spawned)
             {
                 GameObject g1Temp = Instantiate(greenLightPrefab, g1pos.transform);
+                playGreenLightSoundEffect();
                 Destroy(g1Temp, 2);
                 g1Spawned = true;
 
@@ -94,5 +102,15 @@ public class Starter : MonoBehaviour
                 Destroy(gameObject);
             }
         }
+    }
+    
+    private void playRedLightSoundEffect()
+    {
+        redLight.PlayOneShot(redLight.clip);
+    }
+
+    private void playGreenLightSoundEffect()
+    {
+        greenLight.PlayOneShot(greenLight.clip);
     }
 }
