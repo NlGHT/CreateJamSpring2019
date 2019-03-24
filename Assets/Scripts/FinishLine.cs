@@ -25,7 +25,7 @@ public class FinishLine : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.Space))
             {
-                sceneToStart = Random.Range(1, numScenes);
+                sceneToStart = Random.Range(2, numScenes);
 
                 SceneManager.LoadScene(sceneToStart);
             }
