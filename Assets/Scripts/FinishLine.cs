@@ -12,7 +12,7 @@ public class FinishLine : MonoBehaviour
     public GameObject tipSpawnPoint;
 
     int sceneToStart = 1;
-    int numScenes = 6; // Scene 0 is Main menu
+    int numScenes = 5; // Scene 0 is Main menu
 
     bool isFinished = false;
 
