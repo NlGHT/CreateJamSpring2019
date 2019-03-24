@@ -10,6 +10,8 @@ public class ImpactDestroyer : MonoBehaviour
     public GameObject explosionAudioCarrier;
     //public AudioSource explosionAudio;
 
+    private static bool isQuitting = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -68,10 +70,18 @@ public class ImpactDestroyer : MonoBehaviour
         Destroy(gameObject);
     }
 
+    private void OnApplicationQuit()
+    {
+        isQuitting = true;
+    }
+
     private void OnDestroy()
     {
-        Instantiate(explosionAudioCarrier, transform.position, transform.rotation);
+        if (!isQuitting)
+        {
+            Instantiate(explosionAudioCarrier, transform.position, transform.rotation);
 
-        Instantiate(explosionEffect, transform.position, transform.rotation);
+            Instantiate(explosionEffect, transform.position, transform.rotation);
+        }
     }
 }
